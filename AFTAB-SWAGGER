@@ -1,0 +1,45 @@
+1. weeks
+GET
+http://localhost:3000/week/get
+
+POST
+http://localhost:3000/week/add
+{
+	"week": "sample week 1",
+	"personaldescription" : "sample description 1",
+	"officedescription" : "sample description",
+	"happiness_scale" : 5
+}
+
+3. goals
+POST
+http://localhost:3000/goal/add
+{
+	"goal" : "This is a sample goal 8",
+	"expectation": 5,
+	"state": "active"
+}
+
+POST
+http://localhost:3000/goal/edit
+{
+	"goal" : "This is a sample goal 7",
+	"expectation": 91,
+	"state": "active"
+}
+
+GET
+http://localhost:3000/goal
+
+6. expectationreality
+POST
+http://localhost:3000/expectationreality/add
+{
+	"goal" : "This is a sample goal 7",
+	"week" : "week 72",
+	"reality" : 91
+}
+
+7. logs
+GET
+http://localhost:3000/logs
