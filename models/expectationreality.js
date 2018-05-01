@@ -20,15 +20,16 @@ var ExpectationRealitySchema = mongoose.Schema({
 var ExpectationReality = module.exports = mongoose.model('expectationrealities', ExpectationRealitySchema);
 
 module.exports.addExpectationReality = function(info, callback) {
-    console.log("inside the model: ExpectationReality");
+    // console.log("inside the model: ExpectationReality");
 
     week = info['week'];
     goal = info['goal']
     expectation = info['expectation']
     reality = info['reality']
+    console.log('inside models/expectationreality.js : goal == ' + goal + ', reality == ' + reality);
 
     var ExpectationRealityToInsert = { week: week, goal: goal, expectation:expectation, reality:reality };
-    console.log(ExpectationRealityToInsert);
+    // console.log(ExpectationRealityToInsert);
 
     ExpectationReality.create(ExpectationRealityToInsert, callback)
 }

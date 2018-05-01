@@ -72,7 +72,7 @@ module.exports.getGoalByGoalName = function(goal, callback)
 
 module.exports.getGoalByGoalId = function(goalid, callback)
 {
-    console.log('inside the getGoalByGoalId function')
+    // console.log('inside the getGoalByGoalId function')
     var query = {goalid : goalid}
     Goal.findOne(query, callback)
 }

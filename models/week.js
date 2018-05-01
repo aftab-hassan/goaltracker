@@ -29,7 +29,7 @@ module.exports.getWeekById = function(weekCount, callback){
 
 // Adding week
 module.exports.addWeek = function(info, callback) {
-    console.log("inside the model: week");
+    // console.log("inside the model: week");
 
     weekDate = info['weekDate'];
     weekCount = info['weekCount'];
@@ -38,7 +38,7 @@ module.exports.addWeek = function(info, callback) {
     happinessscale = info['happinessscale'];
 
     var weekToInsert = { weekDate: weekDate, weekCount: weekCount, officedescription: officedescription, personaldescription: personaldescription, happinessscale:happinessscale };
-    console.log(weekToInsert);
+    // console.log(weekToInsert);
 
     Week.create(weekToInsert, callback)
 }

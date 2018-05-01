@@ -19,6 +19,7 @@
     "mongodb": "*",
     "mongoose": "*",
     "morgan": "~1.6.1",
+    "node-async-loop": "^1.2.2",
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*",

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var asyncLoop = require('node-async-loop');
 
 Week = require('../models/week');
 ExpectationReality = require('../models/expectationreality');
@@ -44,34 +45,51 @@ router.post('/add', function(req, res){
             form: { "goalid" : "defaultundefined", "week" : info['weekCount'], "reality" : -1 }
         }
 
-        for(var member in req.body)
-        {
-            if(member.startsWith('goal_'))
+        asyncLoop(req.body, function (member, next) {
+
+            console.log('array member : ' + JSON.stringify(member))
+
+            if(member.key.startsWith('goal_'))
             {
-                console.log('detected goal : ' + member)
-                console.log('printing reality : ' + req.body[member])
+                console.log('detected goal : ' + member.key)
+                console.log('printing reality : ' + member.value)
 
                 // Start the request
                 // options.form.goalid = member.split("_")[1];
-                options.form.goalid = member;
-                options.form.reality = req.body[member];
-                console.log('req.body[member] == ' + req.body[member] + ', options.form.reality == ' + options.form.reality)
+                options.form.goalid = member.key;
+                options.form.reality = member.value;
+                console.log('options.form.goalid == ' + options.form.goalid + ', options.form.reality == ' + options.form.reality)
                 request(options, function (error, response, body) {
-                    console.log('error : ' + error)
-                    console.log('response : ' + JSON.stringify(response))
-                    console.log('body : ' + body)
-                    if (!error && response.statusCode == 200) {
+                    // // console.log('error : ' + error)
+                    // // console.log('response : ' + JSON.stringify(response))
+                    // console.log('body : ' + body)
+                    if (error || response.statusCode == 200)
+                    {
                         // Print out the response body
                         // res.send(response)
                         // console.log(body)
+                        next(error);
+                    }
+                    else
+                    {
+                        next();
                     }
                 })
             }
-        }
+
+        }, function (err) {
+            if (err)
+            {
+                console.error('Error: ' + err.message);
+                return;
+            }
+
+            console.log('Finished!');
+        });
 
         res.send(info)
     });
-    console.log('finished adding weeks')
+    // console.log('finished adding weeks')
 
 	req.flash('success_msg', 'You successfully added a week');
 });
