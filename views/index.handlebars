@@ -1,4 +1,76 @@
-<h3>Welcome To Goal tracker</h3>
-	<p>
-	Goal tracker helps keep track of goals. Hang in there cuz tomorrow is going to be better.
-	</p>
+<h4>Welcome To Goal tracker</h4>
+<p>
+    Goal tracker helps keep track of your goals. Hang in there cuz tomorrow is going to be better!
+</p>
+
+<p><b>Update progress for Week {{weekCount}}</b></p>
+
+<form id="weekForm" method="post" action="/expectationrealityandweek/add">
+<table>
+<thead>
+<th>Goal</th>
+<th>Expectation <br />(No. of days/week)</th>
+<th>Reality <br />(No. of days/week)</th>
+</thead>
+<tbody>
+        {{#allgoalsdetails}}
+<tr>
+<td>{{goal}}</td>
+<td>{{expectation}}</td>
+<td><input type="text" id={{goalid}} name={{goalid}} /></td>
+</tr>
+        {{/allgoalsdetails}}
+</tbody>
+</table>
+
+<table>
+    <tr>
+        <td><b>One-liner round up of week - Personal point of view</td>
+        <td><input type="text" name="personaldescription"></td>
+    </tr>
+    <tr>
+        <td><b>One-liner round up of week - Office point of view</td>
+        <td><input type="text" name="officedescription"></td>
+    </tr>
+</table>
+
+<fieldset class="radiogroup">
+    <legend>Happiness scale</legend>
+    <div class="container">
+        <label class="radio-inline">
+            <input type="radio" name="happinessscale" id = "1" value="1">1
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="happinessscale" id = "2" value="2">2
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="happinessscale" id = "3" value="3">3
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="happinessscale" id = "4" value="4">4
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="happinessscale" id = "5" value="5">5
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="happinessscale" id = "6" value="6">6
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="happinessscale" id = "7" value="7">7
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="happinessscale" id = "8" value="8">8
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="happinessscale" id = "9" value="9">9
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label class="radio-inline">
+            <input type="radio" name="happinessscale" id = "10" value="1">10
+        </label>
+    </div>
+</fieldset>
+
+    <div>
+        <input type="submit" value="Submit">
+    </div>
+</form>

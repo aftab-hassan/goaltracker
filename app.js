@@ -15,13 +15,13 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/goaltrackerdb');
 var db = mongoose.connection;
 
-var routes = require('./routes/index');
+var index = require('./routes/index');
 var users = require('./routes/users');
-var classes = require('./routes/classes');
 var expectationreality = require('./routes/expectationreality');
 var week = require('./routes/week');
 var goal = require('./routes/goal');
 var logs = require('./routes/logs');
+var expectationrealityandweek = require('./routes/expectationrealityandweek');
 
 var app = express();
 
@@ -77,14 +77,13 @@ app.use(function (req, res, next) {
   next();
 });
 
-
-app.use('/', routes);
+app.use('/', index);
 app.use('/users', users);
-app.use('/classes', classes);
 app.use('/week', week);
 app.use('/goal', goal);
 app.use('/expectationreality', expectationreality);
 app.use('/logs', logs);
+app.use('/expectationrealityandweek', expectationrealityandweek);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

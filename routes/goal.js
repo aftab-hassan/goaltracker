@@ -95,11 +95,24 @@ router.get('/', function(req, res){
     Goal.getAllGoalDetails(function(err, allgoalsdetails){
         if(err) throw err;
 
-        res.send(allgoalsdetails)
-        // res.render('currentgoals/index', {allgoalsdetails:allgoalsdetails})
+        // res.send(allgoalsdetails)
+        res.render('index', {allgoalsdetails:allgoalsdetails})
     });
 
     req.flash('success_msg', 'You successfully retrieved all goals');
+});
+
+router.get('/addgoalview', function(req, res, next) {
+    res.render('goals/addgoal');
+});
+
+router.get('/editgoalview', function(req, res, next) {
+    Goal.getAllGoalDetails(function(err, allgoalsdetails){
+        if(err) throw err;
+
+        // res.send(allgoalsdetails)
+        res.render('goals/editgoal', {allgoalsdetails:allgoalsdetails})
+    });
 });
 
 module.exports = router;

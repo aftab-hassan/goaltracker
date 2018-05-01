@@ -1,0 +1,24 @@
+<p>
+    <b>Edit goals</b> <br><i>Update expectations, or enter 0 to deactivate goal</i>
+</p>
+
+<form method="post" action="/goal/edit">
+    <table>
+        <thead>
+        <th>Goal</th>
+        <th>Current expectation <br />(No. of days/week)</th>
+        <th>Updated expectation <br />(No. of days/week)</th>
+        </thead>
+        <tbody>
+        {{#allgoalsdetails}}
+            <tr>
+                <td>{{goal}}</td>
+                <td>{{expectation}}</td>
+                <td><input type="text" id={{goal}} name={{goal}}></td>
+            </tr>
+        {{/allgoalsdetails}}
+        </tbody>
+    </table>
+
+    <input type="submit" value="Edit goal expectations">
+</form>

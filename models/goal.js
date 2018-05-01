@@ -8,6 +8,9 @@ var GoalSchema = mongoose.Schema({
 	expectation: {
 		type: Number
 	},
+    goalid: {
+        type: String
+    },
 	state:{
 		type: String
 	}
@@ -22,9 +25,10 @@ module.exports.addGoal = function(info, callback) {
 
     goal = info['goal'];
     expectation = info['expectation'];
+    goalid = guid();
     state = info['state'];
 
-    var goalToInsert = { goal: goal, expectation: expectation, state:state };
+    var goalToInsert = { goal: goal, expectation: expectation, goalid:goalid, state:state };
     console.log(goalToInsert);
 
     Goal.create(goalToInsert, callback)
@@ -66,8 +70,26 @@ module.exports.getGoalByGoalName = function(goal, callback)
     Goal.findOne(query, callback)
 }
 
+module.exports.getGoalByGoalId = function(goalid, callback)
+{
+    console.log('inside the getGoalByGoalId function')
+    var query = {goalid : goalid}
+    Goal.findOne(query, callback)
+}
+
 module.exports.getAllGoalDetails = function(callback)
 {
     console.log('inside the getAllGoalDetails function')
     Goal.find(callback)
+}
+
+function guid() {
+    return 'goal_' + s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        s4() + '-' + s4() + s4() + s4();
+}
+
+function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
 }

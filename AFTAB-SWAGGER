@@ -8,7 +8,7 @@ http://localhost:3000/week/add
 	"week": "sample week 1",
 	"personaldescription" : "sample description 1",
 	"officedescription" : "sample description",
-	"happiness_scale" : 5
+	"happinessscale" : 5
 }
 
 3. goals
@@ -33,9 +33,16 @@ http://localhost:3000/goal
 
 6. expectationreality
 POST
-http://localhost:3000/expectationreality/add
+http://localhost:3000/expectationreality/addbygoalname
 {
 	"goal" : "This is a sample goal 7",
+	"week" : "week 72",
+	"reality" : 91
+}
+
+http://localhost:3000/expectationreality/addbygoalid
+{
+	"goalid" : "5ae5cad64272212cd4212af7",
 	"week" : "week 72",
 	"reality" : 91
 }

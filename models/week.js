@@ -14,7 +14,7 @@ var WeekSchema = mongoose.Schema({
     officedescription: {
         type: String
     },
-	happiness_scale:{
+	happinessscale:{
 		type: Number
 	}
 });
@@ -35,18 +35,12 @@ module.exports.addWeek = function(info, callback) {
     weekCount = info['weekCount'];
     officedescription = info['officedescription']
     personaldescription = info['personaldescription'];
-    happiness_scale = info['happiness_scale'];
+    happinessscale = info['happinessscale'];
 
-    var weekToInsert = { weekDate: weekDate, weekCount: weekCount, officedescription: officedescription, personaldescription: personaldescription, happiness_scale:happiness_scale };
+    var weekToInsert = { weekDate: weekDate, weekCount: weekCount, officedescription: officedescription, personaldescription: personaldescription, happinessscale:happinessscale };
     console.log(weekToInsert);
 
     Week.create(weekToInsert, callback)
-
-    // Week.create(myobj, function(err, res) {
-    //     if (err) throw err;
-    //     console.log("1 document inserted");
-    //     db.close();
-    // });
 }
 
 module.exports.getWeeksLimit = function(callback, limit){

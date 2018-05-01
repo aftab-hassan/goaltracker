@@ -11,14 +11,21 @@ router.get('/get', function(req, res, next) {
 });
 
 router.post('/add', function(req, res){
-	console.log("inside the /week/add route")
+    console.log('inside /week/add')
 	info = [];
 	info['weekDate'] = req.body.weekDate;
     info['weekCount'] = req.body.weekCount;
 	info['personaldescription'] = req.body.personaldescription;
     info['officedescription'] = req.body.officedescription;
-    info['happiness_scale'] = req.body.happiness_scale;
-	console.log(info);
+    info['happinessscale'] = req.body.happinessscale;
+    console.log('printing info from /week/add')
+    console.log(JSON.stringify(info))
+    console.log(info)
+    console.log('done printing')
+
+    console.log('about to print req.body')
+    console.log(JSON.stringify(req.body))
+    console.log('finished printing req.body');
 
 	Week.addWeek(info, function(err, info){
 		if(err) throw err;
