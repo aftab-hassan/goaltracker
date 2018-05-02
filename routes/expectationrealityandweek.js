@@ -9,6 +9,7 @@ ExpectationReality = require('../models/expectationreality');
 // add expectation-reality to expectationrealities table, and week to weekdetails table
 router.post('/add', function(req, res){
     console.log('inside /expectationrealityandweek/add')
+    console.log(JSON.stringify(req.body))
 
 	info = [];
 	info['weekDate'] = getMonthDateYear();
@@ -63,8 +64,10 @@ router.post('/add', function(req, res){
                     // // console.log('error : ' + error)
                     // // console.log('response : ' + JSON.stringify(response))
                     // console.log('body : ' + body)
-                    if (error || response.statusCode == 200)
+                    console.log('AFTAB AFTAB AFTAB : response.statusCode == ' + response.statusCode)
+                    if (error || response.statusCode != 200)
                     {
+                        console.log('AFTAB AFTAB AFTAB came inside the error scenario')
                         // Print out the response body
                         // res.send(response)
                         // console.log(body)
@@ -72,9 +75,13 @@ router.post('/add', function(req, res){
                     }
                     else
                     {
+                        console.log('AFTAB AFTAB AFTAB came inside the non-error scenario')
                         next();
                     }
                 })
+            }
+            else{
+                next();
             }
 
         }, function (err) {

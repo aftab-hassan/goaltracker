@@ -2,7 +2,7 @@
     <b>Edit goals</b> <br><i>Update expectations, or enter 0 to deactivate goal</i>
 </p>
 
-<form method="post" action="/goal/edit">
+<form method="post" action="/goal/editallgoals">
     <table>
         <thead>
         <th>Goal</th>
@@ -14,7 +14,7 @@
             <tr>
                 <td>{{goal}}</td>
                 <td>{{expectation}}</td>
-                <td><input type="text" id={{goal}} name={{goal}}></td>
+                <td><input type="text" id={{goalid}} name={{goalid}} value={{expectation}}></td>
             </tr>
         {{/allgoalsdetails}}
         </tbody>

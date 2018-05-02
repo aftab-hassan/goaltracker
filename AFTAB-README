@@ -1,1 +1,17 @@
 Callback : I'll give you the logic, but you need to plug in your data
+
+asyncLoop in it's simplest form
+asyncLoop(req.body, function(member, next){
+        console.log('member.key == ' + member.key + ', member.value == ' + member.value);
+
+        next();
+    }, function (err)
+        {
+            if (err)
+            {
+                console.error('Error: ' + err.message);
+                return;
+            }
+
+            console.log('Finished!');
+        });
