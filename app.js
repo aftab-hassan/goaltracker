@@ -22,6 +22,7 @@ var week = require('./routes/week');
 var goal = require('./routes/goal');
 var logs = require('./routes/logs');
 var expectationrealityandweek = require('./routes/expectationrealityandweek');
+var visualize = require('./routes/visualize');
 
 var app = express();
 
@@ -84,6 +85,7 @@ app.use('/goal', goal);
 app.use('/expectationreality', expectationreality);
 app.use('/logs', logs);
 app.use('/expectationrealityandweek', expectationrealityandweek);
+app.use('/visualize', visualize);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
