@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e23c6b93-250d-4bc0-b4fb-8759b9e19742" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/views/visualize/data.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/visualize/hardcode.handlebars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/visualize.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/visualize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/layout.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/layout.handlebars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/visualize/hardcode.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/visualize/hardcode.handlebars" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,11 +40,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="hardcode.handlebars" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hardcode.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/visualize/hardcode.handlebars">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+              <caret line="36" column="102" selection-start-line="36" selection-start-column="102" selection-end-line="36" selection-end-column="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.handlebars" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/layouts/layout.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -66,15 +72,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="17" column="18" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/logs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -165,7 +162,6 @@
         <option value="$PROJECT_DIR$/views/classes/index.handlebars" />
         <option value="$PROJECT_DIR$/routes/classes.js" />
         <option value="$PROJECT_DIR$/views/goals/layout.handlebars" />
-        <option value="$PROJECT_DIR$/views/layouts/layout.handlebars" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/week.js" />
         <option value="$PROJECT_DIR$/views/goals/addgoal.handlebars" />
@@ -185,6 +181,7 @@
         <option value="$PROJECT_DIR$/routes/visualize.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/visualize/hardcode.handlebars" />
+        <option value="$PROJECT_DIR$/views/layouts/layout.handlebars" />
       </list>
     </option>
   </component>
@@ -314,12 +311,12 @@
       <workItem from="1524928724439" duration="274000" />
       <workItem from="1524931962380" duration="33783000" />
       <workItem from="1525068861597" duration="12152000" />
-      <workItem from="1525225302005" duration="8949000" />
+      <workItem from="1525225302005" duration="9225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98038000" />
+    <option name="totallyTimeSpent" value="98314000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -488,13 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layouts/layout.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/expectationreality.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -627,7 +617,14 @@
     <entry file="file://$PROJECT_DIR$/views/visualize/hardcode.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <caret line="36" column="102" selection-start-line="36" selection-start-column="102" selection-end-line="36" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layouts/layout.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
