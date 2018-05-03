@@ -90,7 +90,7 @@
                 .text(function(d) { return d.id; });
 
         //start
-        d3.csv("https://raw.githubusercontent.com/aftab-hassan/goaltracker/master/views/visualize/data2.csv", type, function(error, data) {
+        d3.csv("https://raw.githubusercontent.com/aftab-hassan/goaltracker/master/views/visualize/data1.csv", type, function(error, data) {
             if (error) throw error;
 
             var cities = data.columns.slice(1).map(function(id) {
