@@ -25,5 +25,8 @@
     "passport-local": "*",
     "request": "^2.85.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "google-charts": "^1.1.0"
   }
 }

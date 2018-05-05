@@ -1,0 +1,17 @@
+1. This simple json is enough
+{
+  "cols": [
+    {"id":"","label":"Topping","pattern":"","type":"string"},
+    {"id":"","label":"Slices","pattern":"","type":"number"}
+  ],
+  "rows": [
+    {"c":[{"v":"Mushrooms"},{"v":1}]},
+    {"c":[{"v":"Onions"},{"v":2}]},
+    {"c":[{"v":"Olives"},{"v":3}]},
+    {"c":[{"v":"Zucchini"},{"v":4}]},
+    {"c":[{"v":"Pepperoni"},{"v":5}]}
+  ]
+}
+
+
+2.
