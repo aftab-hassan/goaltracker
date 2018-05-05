@@ -7,7 +7,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     console.log('inside /visualize')
 
-    res.render('visualize/d3js')
+    res.render('visualize/googlechartfromapi')
 
     req.flash('success_msg', 'You successfully retrieved all goals');
 });

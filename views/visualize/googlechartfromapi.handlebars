@@ -13,7 +13,8 @@
 
         function drawChart() {
             var jsonData = $.ajax({
-                url: "getData.php",
+                //url: "https://raw.githubusercontent.com/aftab-hassan/goaltracker/master/views/visualize/sampleData.json",
+                url:"http://localhost:3000/sampleapi",
                 dataType: "json",
                 async: false
             }).responseText;
@@ -22,8 +23,11 @@
             var data = new google.visualization.DataTable(jsonData);
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            chart.draw(data, {width: 400, height: 240});
+            // var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            // chart.draw(data, {width: 400, height: 240});
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, {width: 1000, height: 800});
         }
 
     </script>
