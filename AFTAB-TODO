@@ -2,7 +2,7 @@ Immediate TODOs
 1. -"reality" : req.body[member] always translates to one value because of some for loop sync thing maybe
 2. - The /expectationreality/addbygoalid route needs to translate the goal id to goal name before passing on to the addExpectationReality function in models/expectationreality.js
 3. - Edit goal functionality completely broken
-4. Visualize goals
+4. - Work on the routes/getvisualizedata.js to read from expectationrealities table, and format in the format that googlecharts requires, and send
 
 Extra features
 5. Fix the blue color highlighting thing in the homepage

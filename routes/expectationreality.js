@@ -19,7 +19,7 @@ router.post('/addbygoalname', function(req, res){
         }
         else
         {
-            // console.log('results from the getGoalByGoalName api : ' + JSON.stringify(info1))
+            console.log('results from the getGoalByGoalName api : ' + JSON.stringify(info1))
             info['expectation'] = info1.expectation
             // console.log('info1 after adding expectation : ' + JSON.stringify(info))
             ExpectationReality.addExpectationReality( info, function(err2, info2) {
