@@ -1,3 +1,9 @@
+1. Interpolation
+Send data from the api and try and receit it using {{}} in the view
+
+2. Call the api in the javascript og the view/handlebars page using some xttp.req and get that data object, and do .addColumn, .addRows and so on
+
+3. Figure out the syntax for multiple fields, in below
 {
   "cols": [
     {"id":"","label":"Topping","pattern":"","type":"string"},
