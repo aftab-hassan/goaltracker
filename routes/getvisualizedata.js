@@ -13,12 +13,12 @@ router.get('/', function(req, res){
         "cols": [
             {"id":"","label":"Topping","pattern":"","type":"string"},
 
-            {"id":"","label":"Solid-Series-1","pattern":"","type":"number"},
-            {"id":"","label":"Solid-Series-2","pattern":"","type":"number"},
+            {"id":"","label":"Workout Reality","pattern":"","type":"number"},
+            {"id":"","label":"Node.js Reality","pattern":"","type":"number"},
 
-            {"id":"","label":"Dotted-Series-1","pattern":"","type":"number"},
+            {"id":"","label":"Workout Expectation","pattern":"","type":"number"},
             {"id":"","role":"certainty","type":"boolean"},
-            {"id":"","label":"Dotted-Series-2","pattern":"","type":"number"},
+            {"id":"","label":"Node.js Expectation","pattern":"","type":"number"},
             {"id":"","role":"certainty","type":"boolean"}
         ],
         "rows": [
