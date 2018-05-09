@@ -83,4 +83,19 @@ router.post('/addbygoalid', function(req, res){
     req.flash('success_msg', 'You successfully added a goal');
 });
 
+/* GET home page. */
+router.get('/', function(req, res) {
+    console.log('inside GET /expectationreality')
+
+    ExpectationReality.getAllExpectationReality(function(err, allexpectationreality){
+        if(err) throw err;
+
+        console.log('printing all allexpectationreality')
+        res.send(allexpectationreality);
+    });
+
+    req.flash('success_msg', 'You successfully retrieved all goals');
+
+});
+
 module.exports = router;

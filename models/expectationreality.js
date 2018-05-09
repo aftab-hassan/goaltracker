@@ -83,3 +83,7 @@ module.exports.getCumulativeExpectation = function(week, callback){
 module.exports.getExpectationReality = function(callback, limit){
     ExpectationReality.find(callback).limit(limit);
 }
+
+module.exports.getAllExpectationReality = function(callback){
+    ExpectationReality.find(callback);
+}

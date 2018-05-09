@@ -47,6 +47,9 @@ http://localhost:3000/expectationreality/addbygoalid
 	"reality" : 91
 }
 
+GET
+http://localhost:3000/getvisualizedata
+
 7. logs
 GET
 http://localhost:3000/logs
