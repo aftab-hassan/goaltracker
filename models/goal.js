@@ -83,6 +83,12 @@ module.exports.getAllGoalDetails = function(callback)
     Goal.find(callback)
 }
 
+module.exports.getAllGoalDetailsGreaterThanZeroExpectation = function(callback)
+{
+    console.log('inside the getAllGoalDetails function')
+    Goal.find({expectation : { $gt: 0}}, callback)
+}
+
 function guid() {
     return 'goal_' + s4() + s4() + '-' + s4() + '-' + s4() + '-' +
         s4() + '-' + s4() + s4() + s4();

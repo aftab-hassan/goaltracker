@@ -87,3 +87,7 @@ module.exports.getExpectationReality = function(callback, limit){
 module.exports.getAllExpectationReality = function(callback){
     ExpectationReality.find(callback);
 }
+
+module.exports.getExpectationRealityForCondition = function(callback, week, goal){
+    ExpectationReality.find({week: week, goal:goal}, callback);
+}
