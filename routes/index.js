@@ -15,7 +15,8 @@ router.get('/', function(req, res, next) {
         console.log('allgoalsdetails before sending to views');
         console.log(JSON.stringify(allgoalsdetails))
         console.log('done sending allgoalsdetails to views')
-        res.render('index', {weekCount:result[1], allgoalsdetails:allgoalsdetails})
+        // res.render('index', {weekCount:result[1], allgoalsdetails:allgoalsdetails})
+        res.render('index', {weekCount:29, allgoalsdetails:allgoalsdetails})
     });
 
     req.flash('success_msg', 'You successfully retrieved all goals');

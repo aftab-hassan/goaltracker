@@ -63,14 +63,14 @@ router.get('/', function(req, res){
     //             {"id":"","label":"Workout Expectation","pattern":"","type":"number"},
     //             {"id":"","role":"certainty","type":"boolean"},
     //             {"id":"","label":"Node.js Expectation","pattern":"","type":"number"},
-    //             {"id":"","role":"certainty","type":"boolean"}
-    //             {"id":"","role":"style","type":"color"}
+    //             {"id":"","role":"certainty","type":"boolean"},
+    //             {"id":"","role":"style"}
     //         ],
     //         "rows": [
-    //             {"c":[{"v":"Week 17"},{"v":6},{"v":5},{"v":4},{"v":false},{"v":3},{"v":false},{"v":red}]},
-    //             {"c":[{"v":"Week 18"},{"v":12},{"v":11},{"v":8},{"v":false},{"v":7},{"v":false},{"v":red}]},
-    //             {"c":[{"v":"Week 19"},{"v":18},{"v":15},{"v":12},{"v":false},{"v":12},{"v":false},{"v":red}]},
-    //             {"c":[{"v":"Week 20"},{"v":24},{"v":20},{"v":16},{"v":false},{"v":14},{"v":false},{"v":red}]}
+    //             {"c":[{"v":"Week 17"},{"v":6},{"v":5},{"v":4},{"v":false},{"v":3},{"v":false},{"color":"red"}]},
+    //             {"c":[{"v":"Week 18"},{"v":12},{"v":11},{"v":8},{"v":false},{"v":7},{"v":false},{"color":"red"}]},
+    //             {"c":[{"v":"Week 19"},{"v":18},{"v":15},{"v":12},{"v":false},{"v":12},{"v":false},{"color":"red"}]},
+    //             {"c":[{"v":"Week 20"},{"v":24},{"v":20},{"v":16},{"v":false},{"v":14},{"v":false},{"color":"red"}]}
     //         ]
     // })
 
@@ -231,6 +231,7 @@ router.get('/', function(req, res){
                 rows.push({"c":cValuesArray})
             }
             console.log(rows);
+            console.log(JSON.stringify(rows))
             var result = {rows:rows, cols:cols};
             console.log('printing result');
             console.log(result);

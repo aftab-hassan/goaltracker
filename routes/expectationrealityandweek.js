@@ -15,7 +15,8 @@ router.post('/add', function(req, res){
 	info['weekDate'] = getMonthDateYear();
 
     var result = getWeekNumber(new Date());
-    info['weekCount'] = result[1];
+    // info['weekCount'] = result[1];
+    info['weekCount'] = req.body.weekCount;
 
     info['personaldescription'] = req.body.personaldescription;
     info['officedescription'] = req.body.officedescription;

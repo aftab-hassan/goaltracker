@@ -36,35 +36,47 @@ module.exports.addExpectationReality = function(info, callback) {
     cumulativereality = 0;
     console.log('inside models/expectationreality.js : goal == ' + goal + ', reality == ' + reality);
 
-    ExpectationReality.getCumulativeExpectation(week-1, function(err1, info1){
+    ExpectationReality.getCumulativeExpectationAndReality(week-1, goal, function(err1, info1){
         if(err1)
         {
             throw err1;
         }
         else
         {
-            console.log('printing info')
-            console.log(info1);
-            console.log(JSON.stringify(info1))
-            if(info1['cumulativeexpectation'] != null)
+            if(info1 == null)
             {
-                console.log('inside info1[\'cumulativeexpectation\'] != null')
-                cumulativeexpectation = info1['cumulativeexpectation'] + expectation;
-                console.log('cumulativeexpectation == ' + cumulativeexpectation)
-            }
-            else
-            {
-                console.log('inside info1[\'cumulativeexpectation\'] == null')
                 cumulativeexpectation = expectation;
-            }
-
-            if(info1['cumulativereality'])
-            {
-                cumulativereality = info1['cumulativereality'] + reality;
+                cumulativereality = reality;
             }
             else
             {
-                cumulativereality = reality;
+                console.log('printing info')
+                console.log(info1);
+                console.log(JSON.stringify(info1))
+                if(info1['cumulativeexpectation'] != null)
+                {
+                    console.log('inside info1[\'cumulativeexpectation\'] != null')
+                    console.log('cumulativeexpectation during == ' + info1['cumulativeexpectation'] + " + " + expectation + " == " + (parseInt(info1['cumulativeexpectation']) + parseInt(expectation)));
+                    cumulativeexpectation = parseInt(info1['cumulativeexpectation']) + parseInt(expectation);
+                    console.log('cumulativeexpectation == ' + cumulativeexpectation)
+                }
+                else
+                {
+                    console.log('inside info1[\'cumulativeexpectation\'] == null')
+                    cumulativeexpectation = expectation;
+                }
+
+                if(info1['cumulativereality'])
+                {
+                    console.log('cumulativereality before == ' + cumulativereality)
+                    console.log('cumulativereality during == ' + info1['cumulativereality'] + " + " + reality + " == " + (parseInt(info1['cumulativereality']) + parseInt(reality)));
+                    cumulativereality = parseInt(info1['cumulativereality']) + parseInt(reality);
+                    console.log('cumulativereality after == ' + cumulativereality)
+                }
+                else
+                {
+                    cumulativereality = reality;
+                }
             }
 
             var ExpectationRealityToInsert = { week: week, goal: goal, expectation:expectation, reality:reality, cumulativeexpectation:cumulativeexpectation, cumulativereality:cumulativereality };
@@ -75,19 +87,11 @@ module.exports.addExpectationReality = function(info, callback) {
     });
 }
 
-module.exports.getCumulativeExpectation = function(week, callback){
-    var query = {week: week};
+module.exports.getCumulativeExpectationAndReality = function(week, goal, callback){
+    var query = {week: week, goal:goal};
     ExpectationReality.findOne(query, callback);
-}
-
-module.exports.getExpectationReality = function(callback, limit){
-    ExpectationReality.find(callback).limit(limit);
 }
 
 module.exports.getAllExpectationReality = function(callback){
     ExpectationReality.find(callback);
-}
-
-module.exports.getExpectationRealityForCondition = function(callback, week, goal){
-    ExpectationReality.find({week: week, goal:goal}, callback);
 }

@@ -3,9 +3,9 @@
     Goal tracker helps keep track of your goals. Hang in there cuz tomorrow is going to be better!
 </p>
 
-<p><b>Update progress for Week {{weekCount}}</b></p>
-
+<!--<p><b>Update progress for Week {{weekCount}}</b></p>-->
 <form id="weekForm" method="post" action="/expectationrealityandweek/add">
+<p>Update progress for Week <input type="text" id="weekCount" name="weekCount" value={{weekCount}}></p>
 <table>
 <thead>
 <th>Goal</th>
