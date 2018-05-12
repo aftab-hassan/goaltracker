@@ -66,10 +66,8 @@ router.get('/', function(req, res){
             for(var i = 0;i<goalSetValues.length;i++)
             {
                 cols.push({"id":"","label":goalSetValues[i]+" Reality","pattern":"","type":"number"});
-                cols.push({"id":"","role":"style","type":"string"});
 
                 cols.push({"id":"","label":goalSetValues[i]+" Expectation","pattern":"","type":"number"});
-                cols.push({"id":"","role":"style","type":"string"});
                 cols.push({"id":"","role":"certainty","type":"boolean"});
             }
             console.log(cols);
@@ -89,7 +87,6 @@ router.get('/', function(req, res){
                         if(body[k].goal == goalSetValues[i] && body[k].week == weekSetValues[j])
                         {
                             cValuesArray.push({"v":body[k].cumulativereality});
-                            cValuesArray.push({"v":"magenta"});
                         }
                     }
 
@@ -98,7 +95,6 @@ router.get('/', function(req, res){
                         if(body[k].goal == goalSetValues[i] && body[k].week == weekSetValues[j])
                         {
                             cValuesArray.push({"v":body[k].cumulativeexpectation});
-                            cValuesArray.push({"v":"orange"});
                             cValuesArray.push({"v":false});
                         }
                     }
