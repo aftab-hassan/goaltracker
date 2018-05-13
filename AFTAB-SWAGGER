@@ -53,3 +53,6 @@ http://localhost:3000/getvisualizedata
 7. logs
 GET
 http://localhost:3000/logs
+
+8. checkpostcall
+sample POST request in node

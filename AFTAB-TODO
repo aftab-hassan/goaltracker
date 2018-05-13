@@ -3,7 +3,9 @@ Immediate TODOs
 2. - The /expectationreality/addbygoalid route needs to translate the goal id to goal name before passing on to the addExpectationReality function in models/expectationreality.js
 3. - Edit goal functionality completely broken
 4. - Work on the routes/getvisualizedata.js to read from expectationrealities table, and format in the format that googlecharts requires, and send
-5. Add per goal graph in visualize page
+5. - Fix colors problem
+6. Add per goal graph in visualize page
+7. Tool tip for week
 
 Bugs
 1. Breaks when you deactivate a goal, and try and continue
