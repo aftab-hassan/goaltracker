@@ -6,7 +6,7 @@
         <tbody>
         {{#goalSetValues}}
             <!--<tr>-->
-                <td><button>{{goal}}</button></td>
+                <td><button onclick=init('{{goal}}')>{{goal}}</button></td>
             <!--</tr>-->
         {{/goalSetValues}}
         </tbody>
@@ -22,9 +22,23 @@
         google.charts.load('current', {'packages':['corechart']});
 
         // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(drawChart);
+        google.charts.setOnLoadCallback(init);
 
-        function drawChart() {
+        function init (goalName) {
+            if(goalName)
+            {
+                drawChart(goalName.toString());
+            }
+            else
+            {
+                drawChart();
+            }
+        }
+
+        function drawChart(goalName) {
+
+            console.log('inside the drawChart function, goalName == ' + goalName);
+
             var jsonData = $.ajax({
                 url:"http://localhost:3000/getvisualizedata",
                 dataType: "json",
