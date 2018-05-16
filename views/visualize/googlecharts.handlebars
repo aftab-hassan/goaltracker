@@ -4,6 +4,7 @@
         <thead>
         </thead>
         <tbody>
+        <td><button onclick=init('MAGICSTRINGTHATGETSMEALLGOALS')>All goals</button></td>
         {{#goalSetValues}}
             <!--<tr>-->
                 <td><button onclick=init('{{goal}}')>{{goal}}</button></td>
@@ -25,22 +26,43 @@
         google.charts.setOnLoadCallback(init);
 
         function init (goalName) {
-            if(goalName)
+            console.log('came inside the init function with goalName == ' + goalName)
+            if(goalName && goalName!== 'MAGICSTRINGTHATGETSMEALLGOALS')
             {
-                drawChart(goalName.toString());
+                console.log('came in the if condition')
+                drawChart(goalName.toString(), 'dateTimeNotNeededHere');
             }
             else
             {
-                drawChart();
+                console.log('came in the else condition')
+                var today = new Date();
+                var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                var dateTime = date+' '+time;
+                drawChart('MAGICSTRINGTHATGETSMEALLGOALS' + dateTime, dateTime);
             }
         }
 
-        function drawChart(goalName) {
+        function drawChart(goal, dateTime) {
 
-            console.log('inside the drawChart function, goalName == ' + goalName);
+            console.log('inside the drawChart function, goal == ' + goal);
+            var allGoalsWithSecret =  'MAGICSTRINGTHATGETSMEALLGOALS' + dateTime;
+            var url;
+            if(goal == allGoalsWithSecret)
+            {
+                console.log('came in the if condition of the url')
+                url = 'http://localhost:3000/getvisualizedata?retrieveallgoals=true'
+            }
+            else
+            {
+                console.log('came in the else condition of the url')
+                url = 'http://localhost:3000/getvisualizedata?goal='+goal;
+            }
+
+            console.log('printing url : url == ' + url)
 
             var jsonData = $.ajax({
-                url:"http://localhost:3000/getvisualizedata",
+                url:url,
                 dataType: "json",
                 async: false
             }).responseText;
@@ -60,10 +82,19 @@
                 colorsArray.push(CSS_COLOR_NAMES[i]);
                 colorsArray.push(CSS_COLOR_NAMES[i]);
             }
-            var options = {'title':'All goals expectation-reality',
+            var title='';
+            if(goal == allGoalsWithSecret)
+            {
+                title = 'All goals expectation-reality';
+            }
+            else
+            {
+                title = goal + ' expectation-reality';
+            }
+
+            var options = {'title':title,
                 'width':1000,
                 'height':800,
-                // colors: ['red', 'red', 'green', 'green']
                 colors: colorsArray
             };
             var chart = new google.visualization.LineChart(document.getElementById('chart_div'));

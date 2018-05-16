@@ -87,12 +87,26 @@ router.post('/addbygoalid', function(req, res){
 router.get('/', function(req, res) {
     console.log('inside GET /expectationreality')
 
-    ExpectationReality.getAllExpectationReality(function(err, allexpectationreality){
-        if(err) throw err;
+    if(req.query.retrieveallgoals === 'true')
+    {
+        console.log("aftab debug :came inside req.query.retrieveallgoals === true")
+        ExpectationReality.getAllExpectationReality(function(err, allexpectationreality){
+            if(err) throw err;
 
-        console.log('printing all allexpectationreality')
-        res.send(allexpectationreality);
-    });
+            console.log('printing all allexpectationreality')
+            res.send(allexpectationreality);
+        });
+    }
+    else
+    {
+        console.log("aftab debug : did not come inside req.query.retrieveallgoals === true")
+        ExpectationReality.getExpectationRealityForGivenGoal(req.query.goal, function(err, allexpectationreality){
+            if(err) throw err;
+
+            console.log('printing all allexpectationreality')
+            res.send(allexpectationreality);
+        });
+    }
 
     req.flash('success_msg', 'You successfully retrieved all goals');
 

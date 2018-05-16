@@ -8,7 +8,8 @@ Log = require('../models/log');
 ExpectationReality = require('../models/expectationreality');
 
 router.get('/', function(req, res){
-    console.log('aftab : came inside the /getvisualizedata api')
+    console.log('aftab : came inside the GET /getvisualizedata api')
+    console.log("aftab : GET : query : " + JSON.stringify(req.query))
 
     // start
     // formatting the output of REST API
@@ -17,12 +18,25 @@ router.get('/', function(req, res){
         'Content-Type':     'application/x-www-form-urlencoded'
     }
 
+    var url = '';
+    if(req.query.retrieveallgoals === 'true')
+    {
+        console.log('came in the if condition of the url')
+        url = 'http://localhost:3000/expectationreality?retrieveallgoals=true'
+    }
+    else
+    {
+        console.log('came in the else condition of the url')
+        url = 'http://localhost:3000/expectationreality?goal='+req.query.goal;
+    }
+
     // Configure the request
     var options = {
-        url: 'http://localhost:3000/expectationreality/',
+        url: url,
         method: 'GET',
         headers: headers
     }
+    console.log('printing from options : ' + options.url );
 
     request(options, function (error, response, body) {
         console.log('AFTAB AFTAB AFTAB : response.statusCode == ' + response.statusCode)

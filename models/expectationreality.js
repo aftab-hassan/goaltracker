@@ -85,6 +85,7 @@ module.exports.addExpectationReality = function(info, callback) {
     });
 }
 
+// used for week-1
 module.exports.getCumulativeExpectationAndReality = function(week, goal, callback){
     var query = {week: week, goal:goal};
     ExpectationReality.findOne(query, callback);
@@ -92,4 +93,10 @@ module.exports.getCumulativeExpectationAndReality = function(week, goal, callbac
 
 module.exports.getAllExpectationReality = function(callback){
     ExpectationReality.find(callback);
+}
+
+// used for individual graphs
+module.exports.getExpectationRealityForGivenGoal = function(goal, callback){
+    var query = {goal:goal};
+    ExpectationReality.find(query, callback);
 }

@@ -16,8 +16,9 @@ router.get('/', function(req, res, next) {
     }
 
     // Configure the request
+    // this request only gets all goal names, nothing to do with data, just calls res.render and renders visualize/googlecharts
     var options = {
-        url: 'http://localhost:3000/expectationreality/',
+        url: 'http://localhost:3000/expectationreality?retrieveallgoals=true',
         method: 'GET',
         headers: headers
     }
@@ -33,7 +34,6 @@ router.get('/', function(req, res, next) {
                 goalsSet.add(body[i].goal);
             }
             var goalSetValues = [];
-            goalSetValues.push({"goal" : "All goals"});
             goalsSet.forEach(function (item) {
                 goalSetValues.push({"goal" : item});
             });

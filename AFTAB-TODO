@@ -4,8 +4,9 @@ Immediate TODOs
 3. - Edit goal functionality completely broken
 4. - Work on the routes/getvisualizedata.js to read from expectationrealities table, and format in the format that googlecharts requires, and send
 5. - Fix colors problem
-6. Add per goal graph in visualize page
+6. - Add per goal graph in visualize page
 7. Tool tip for week
+8. Have each graph with a different color
 
 Bugs
 1. Breaks when you deactivate a goal, and try and continue

@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e23c6b93-250d-4bc0-b4fb-8759b9e19742" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AFTAB-TODO" beforeDir="false" afterPath="$PROJECT_DIR$/AFTAB-TODO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/expectationreality.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/expectationreality.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/expectationreality.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/expectationreality.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/getvisualizedata.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/getvisualizedata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/visualize.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/visualize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/visualize/googlecharts.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/visualize/googlecharts.handlebars" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +27,8 @@
       <file leaf-file-name="visualize.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/visualize.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="19" column="54" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="54" />
+            <state relative-caret-position="246">
+              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -28,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="googlecharts.handlebars" pinned="false" current-in-tab="false">
+      <file leaf-file-name="googlecharts.handlebars" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/visualize/googlecharts.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-261">
-              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+            <state relative-caret-position="255">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -40,8 +48,8 @@
       <file leaf-file-name="getvisualizedata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/getvisualizedata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+            <state relative-caret-position="-1020">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -49,8 +57,8 @@
       <file leaf-file-name="expectationreality.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/expectationreality.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="89" column="40" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
+            <state relative-caret-position="620">
+              <caret line="105" column="61" lean-forward="true" selection-start-line="105" selection-start-column="61" selection-end-line="105" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -58,8 +66,8 @@
       <file leaf-file-name="expectationreality.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/expectationreality.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="92" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="460">
+              <caret line="98" column="48" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -82,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AFTAB-TODO" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AFTAB-TODO" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AFTAB-TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="136">
+              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -111,9 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>console.log('printing info')             console.log(info1);             console.log(JSON.stringify(info1))             if(info1['cumulativeexpectation'] != null)             {                 console.log('inside info1[\'cumulativeexpectation\'] != null')                 cumulativeexpectation = info1['cumulativeexpectation'] + expectation;                 console.log('cumulativeexpectation == ' + cumulativeexpectation)             }             else             {                 console.log('inside info1[\'cumulativeexpectation\'] == null')                 cumulativeexpectation = expectation;             }              if(info1['cumulativereality'])             {                 cumulativereality = info1['cumulativereality'] + reality;             }             else             {                 cumulativereality = reality;             }</find>
-      <find>weekCount</find>
-      <find>getweek</find>
       <find>addExpectationReality</find>
       <find>addbygoalid</find>
       <find>addWeek</find>
@@ -123,7 +128,6 @@
       <find>getAllExpectationReality</find>
       <find>getExpectationRealityForCondition</find>
       <find>getExpectationReality</find>
-      <find>getCumulativeExpectationAndReality</find>
       <find>/index</find>
       <find>index</find>
       <find>update p</find>
@@ -139,8 +143,12 @@
       <find>request(options, function</find>
       <find>console.log</find>
       <find>allgoalsdetails</find>
-      <find>render</find>
+      <find>getCumulativeExpectationAndReality</find>
       <find>drawChart</find>
+      <find>goalName</find>
+      <find>goal</find>
+      <find>title</find>
+      <find>render</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -194,18 +202,18 @@
         <option value="$PROJECT_DIR$/views/visualize/googlecharts7_option2.handlebars" />
         <option value="$PROJECT_DIR$/routes/sampleapi.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/expectationreality.js" />
         <option value="$PROJECT_DIR$/models/goal.js" />
         <option value="$PROJECT_DIR$/routes/expectationrealityandweek.js" />
         <option value="$PROJECT_DIR$/views/index.handlebars" />
         <option value="$PROJECT_DIR$/views/layouts/layout.handlebars" />
-        <option value="$PROJECT_DIR$/routes/getvisualizedata.js" />
         <option value="$PROJECT_DIR$/AFTAB-SWAGGER" />
-        <option value="$PROJECT_DIR$/models/expectationreality.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/models/expectationreality.js" />
+        <option value="$PROJECT_DIR$/routes/getvisualizedata.js" />
+        <option value="$PROJECT_DIR$/routes/expectationreality.js" />
         <option value="$PROJECT_DIR$/routes/visualize.js" />
-        <option value="$PROJECT_DIR$/views/visualize/googlecharts.handlebars" />
         <option value="$PROJECT_DIR$/AFTAB-TODO" />
+        <option value="$PROJECT_DIR$/views/visualize/googlecharts.handlebars" />
       </list>
     </option>
   </component>
@@ -341,7 +349,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202371000" />
+    <option name="totallyTimeSpent" value="216868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -635,16 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/visualize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="54" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/week.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -666,38 +664,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/visualize/googlecharts.handlebars">
+    <entry file="file://$PROJECT_DIR$/models/expectationreality.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-261">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/getvisualizedata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        <state relative-caret-position="460">
+          <caret line="98" column="48" selection-start-line="98" selection-start-column="15" selection-end-line="98" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/expectationreality.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="89" column="40" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
+        <state relative-caret-position="620">
+          <caret line="105" column="61" lean-forward="true" selection-start-line="105" selection-start-column="61" selection-end-line="105" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/expectationreality.js">
+    <entry file="file://$PROJECT_DIR$/routes/getvisualizedata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="-1020">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AFTAB-TODO">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="136">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/visualize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/visualize/googlecharts.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
