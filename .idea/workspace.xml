@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e23c6b93-250d-4bc0-b4fb-8759b9e19742" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AFTAB-TODO" beforeDir="false" afterPath="$PROJECT_DIR$/AFTAB-TODO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/expectationreality.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/expectationreality.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/expectationreality.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/expectationreality.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/getvisualizedata.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/getvisualizedata.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/visualize.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/visualize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/visualize/googlecharts.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/visualize/googlecharts.handlebars" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -39,8 +31,8 @@
       <file leaf-file-name="googlecharts.handlebars" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/visualize/googlecharts.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="170">
+              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -349,7 +341,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216868000" />
+    <option name="totallyTimeSpent" value="216940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -704,8 +696,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/visualize/googlecharts.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="170">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>

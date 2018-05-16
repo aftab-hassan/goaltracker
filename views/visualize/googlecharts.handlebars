@@ -19,87 +19,87 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
 
-        // Load the Visualization API and the piechart package.
-        google.charts.load('current', {'packages':['corechart']});
+    // Load the Visualization API and the piechart package.
+    google.charts.load('current', {'packages':['corechart']});
 
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(init);
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(init);
 
-        function init (goalName) {
-            console.log('came inside the init function with goalName == ' + goalName)
-            if(goalName && goalName!== 'MAGICSTRINGTHATGETSMEALLGOALS')
-            {
-                console.log('came in the if condition')
-                drawChart(goalName.toString(), 'dateTimeNotNeededHere');
-            }
-            else
-            {
-                console.log('came in the else condition')
-                var today = new Date();
-                var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-                var dateTime = date+' '+time;
-                drawChart('MAGICSTRINGTHATGETSMEALLGOALS' + dateTime, dateTime);
-            }
+    function init (goalName) {
+        console.log('came inside the init function with goalName == ' + goalName)
+        if(goalName && goalName!== 'MAGICSTRINGTHATGETSMEALLGOALS')
+        {
+            console.log('came in the if condition')
+            drawChart(goalName.toString(), 'dateTimeNotNeededHere');
+        }
+        else
+        {
+            console.log('came in the else condition')
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date+' '+time;
+            drawChart('MAGICSTRINGTHATGETSMEALLGOALS' + dateTime, dateTime);
+        }
+    }
+
+    function drawChart(goal, dateTime) {
+
+        console.log('inside the drawChart function, goal == ' + goal);
+        var allGoalsWithSecret =  'MAGICSTRINGTHATGETSMEALLGOALS' + dateTime;
+        var url;
+        if(goal == allGoalsWithSecret)
+        {
+            console.log('came in the if condition of the url')
+            url = 'http://localhost:3000/getvisualizedata?retrieveallgoals=true'
+        }
+        else
+        {
+            console.log('came in the else condition of the url')
+            url = 'http://localhost:3000/getvisualizedata?goal='+goal;
         }
 
-        function drawChart(goal, dateTime) {
+        console.log('printing url : url == ' + url)
 
-            console.log('inside the drawChart function, goal == ' + goal);
-            var allGoalsWithSecret =  'MAGICSTRINGTHATGETSMEALLGOALS' + dateTime;
-            var url;
-            if(goal == allGoalsWithSecret)
-            {
-                console.log('came in the if condition of the url')
-                url = 'http://localhost:3000/getvisualizedata?retrieveallgoals=true'
-            }
-            else
-            {
-                console.log('came in the else condition of the url')
-                url = 'http://localhost:3000/getvisualizedata?goal='+goal;
-            }
+        var jsonData = $.ajax({
+            url:url,
+            dataType: "json",
+            async: false
+        }).responseText;
 
-            console.log('printing url : url == ' + url)
+        // Create our data table out of JSON data loaded from server.
+        var data = new google.visualization.DataTable(jsonData);
+        console.log('printing data start')
+        console.log(data)
+        console.log('printing data end')
 
-            var jsonData = $.ajax({
-                url:url,
-                dataType: "json",
-                async: false
-            }).responseText;
+        var count = (JSON.stringify(data).match(/Expectation/g) || []).length;
+        var CSS_COLOR_NAMES = ["DeepSkyBlue","Darkorange","GreenYellow","ForestGreen","Crimson","HotPink","Brown","Lime","PeachPuff","DarkSlateGray","Peru","Pink","Plum","PowderBlue","Purple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen","AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","DarkRed","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","DarkOrchid","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGrey","DarkTurquoise","DarkViolet","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","DeepPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","HoneyDew"];
 
-            // Create our data table out of JSON data loaded from server.
-            var data = new google.visualization.DataTable(jsonData);
-            console.log('printing data start')
-            console.log(data)
-            console.log('printing data end')
-
-            var count = (JSON.stringify(data).match(/Expectation/g) || []).length;
-            var CSS_COLOR_NAMES = ["DeepSkyBlue","Darkorange","GreenYellow","ForestGreen","Crimson","HotPink","Brown","Lime","PeachPuff","DarkSlateGray","Peru","Pink","Plum","PowderBlue","Purple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen","AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","DarkRed","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","DarkOrchid","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGrey","DarkTurquoise","DarkViolet","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","DeepPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","HoneyDew"];
-
-            var colorsArray = [];
-            for(var i = 0;i<count;i++)
-            {
-                colorsArray.push(CSS_COLOR_NAMES[i]);
-                colorsArray.push(CSS_COLOR_NAMES[i]);
-            }
-            var title='';
-            if(goal == allGoalsWithSecret)
-            {
-                title = 'All goals expectation-reality';
-            }
-            else
-            {
-                title = goal + ' expectation-reality';
-            }
-
-            var options = {'title':title,
-                'width':1000,
-                'height':800,
-                colors: colorsArray
-            };
-            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
+        var colorsArray = [];
+        for(var i = 0;i<count;i++)
+        {
+            colorsArray.push(CSS_COLOR_NAMES[i]);
+            colorsArray.push(CSS_COLOR_NAMES[i]);
         }
+        var title='';
+        if(goal == allGoalsWithSecret)
+        {
+            title = 'All goals expectation-reality';
+        }
+        else
+        {
+            title = goal + ' expectation-reality';
+        }
+
+        var options = {'title':title,
+            'width':1000,
+            'height':800,
+            colors: colorsArray
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
 
     </script>
 </head>
