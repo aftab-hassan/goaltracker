@@ -7,7 +7,7 @@
         <td><button onclick=init('MAGICSTRINGTHATGETSMEALLGOALS')>All goals</button></td>
         {{#goalSetValues}}
             <!--<tr>-->
-                <td><button onclick=init('{{goal}}')>{{goal}}</button></td>
+                <td><button onclick=init('{{goal}}')>{{{goal}}}</button></td>
             <!--</tr>-->
         {{/goalSetValues}}
         </tbody>
@@ -26,9 +26,11 @@
     google.charts.setOnLoadCallback(init);
 
     function init (goalName) {
+
         console.log('came inside the init function with goalName == ' + goalName)
         if(goalName && goalName!== 'MAGICSTRINGTHATGETSMEALLGOALS')
         {
+            goalName = goalName.replace(new RegExp('&nbsp;', 'g'), ' ')
             console.log('came in the if condition')
             drawChart(goalName.toString(), 'dateTimeNotNeededHere');
         }

@@ -35,7 +35,12 @@ router.get('/', function(req, res, next) {
             }
             var goalSetValues = [];
             goalsSet.forEach(function (item) {
-                goalSetValues.push({"goal" : item});
+                console.log('spaceNoReplacedItem == ' + item);
+                var nbsp = String.fromCharCode(parseInt("00A0", 16));
+                // var spaceReplacedItem = item.replace("&nbsp;", nbsp);
+                var spaceReplacedItem = item.replace(new RegExp(' ', 'g'), '&nbsp;');
+                console.log('spaceReplacedItem == ' + spaceReplacedItem);
+                goalSetValues.push({"goal" : spaceReplacedItem});
             });
             console.log('AFTAB goalSetValues : ' + JSON.stringify(goalSetValues))
             res.render('visualize/googlecharts', {goalSetValues})
