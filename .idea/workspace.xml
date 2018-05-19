@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e23c6b93-250d-4bc0-b4fb-8759b9e19742" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AFTAB-TODO" beforeDir="false" afterPath="$PROJECT_DIR$/AFTAB-TODO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/connect-flash/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/connect-flash/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/connect-flash/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/connect-flash/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/connect-flash/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/connect-flash/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/connect-flash/lib/flash.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/connect-flash/lib/flash.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/connect-flash/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/connect-flash/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/connect-flash/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/connect-flash/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/expectationreality.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/expectationreality.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/expectationrealityandweek.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/expectationrealityandweek.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/goal.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/goal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/sampleapi.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/sampleapi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/visualize.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/visualize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layouts/layout.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/layout.handlebars" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,18 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="visualize.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/visualize.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="editgoal.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/goals/editgoal.handlebars">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,8 +52,17 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="10" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="306">
+              <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="goal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/goal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -86,7 +70,7 @@
       <file leaf-file-name="index.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
+            <state relative-caret-position="1275">
               <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
             </state>
           </provider>
@@ -101,20 +85,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AFTAB-TODO" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AFTAB-TODO">
+      <file leaf-file-name="layout.handlebars" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/layouts/layout.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state relative-caret-position="272">
+              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="expectationreality.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/expectationreality.js">
+      <file leaf-file-name="AFTAB-TODO" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AFTAB-TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+            <state relative-caret-position="306">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -139,8 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getAllExpectationReality</find>
-      <find>getExpectationRealityForCondition</find>
       <find>getExpectationReality</find>
       <find>/index</find>
       <find>index</find>
@@ -169,6 +151,8 @@
       <find>Edit goal exp</find>
       <find>res.send</find>
       <find>encounteredError</find>
+      <find>getAllGoalDetailsGreater</find>
+      <find>Home</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -219,21 +203,21 @@
         <option value="$PROJECT_DIR$/views/visualize/AFTAB-OPTIONS" />
         <option value="$PROJECT_DIR$/views/visualize/googlechartfromapi3.handlebars" />
         <option value="$PROJECT_DIR$/views/visualize/googlecharts7_option2.handlebars" />
-        <option value="$PROJECT_DIR$/models/goal.js" />
         <option value="$PROJECT_DIR$/views/index.handlebars" />
         <option value="$PROJECT_DIR$/AFTAB-SWAGGER" />
         <option value="$PROJECT_DIR$/models/expectationreality.js" />
         <option value="$PROJECT_DIR$/routes/getvisualizedata.js" />
         <option value="$PROJECT_DIR$/views/visualize/googlecharts.handlebars" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/views/layouts/layout.handlebars" />
         <option value="$PROJECT_DIR$/routes/expectationrealityandweek.js" />
         <option value="$PROJECT_DIR$/routes/expectationreality.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/visualize.js" />
         <option value="$PROJECT_DIR$/routes/sampleapi.js" />
         <option value="$PROJECT_DIR$/routes/goal.js" />
         <option value="$PROJECT_DIR$/AFTAB-TODO" />
+        <option value="$PROJECT_DIR$/models/goal.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/views/layouts/layout.handlebars" />
       </list>
     </option>
   </component>
@@ -357,12 +341,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226997000" />
+    <option name="totallyTimeSpent" value="229021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18345563" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18345563" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033355" side_tool="true" weight="0.2915215" />
@@ -371,7 +356,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49966645" visible="true" weight="0.2915215" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49966645" visible="true" weight="0.2915215" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -598,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/goal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/getvisualizedata.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1097">
@@ -633,20 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layouts/layout.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/expectationreality.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -671,13 +635,6 @@
           <folding>
             <marker date="1526533392465" expanded="true" signature="905:979" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -711,8 +668,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AFTAB-TODO">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state relative-caret-position="306">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/goal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layouts/layout.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
         </state>
       </provider>
     </entry>

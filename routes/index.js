@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
     var result = getWeekNumber(new Date());
 
-    Goal.getAllGoalDetailsGreaterThanZeroExpectation(function(err, allgoalsdetails){
+    Goal.getAllGoalDetails(function(err, allgoalsdetails){
         if(err) throw err;
 
         // res.send(allgoalsdetails)

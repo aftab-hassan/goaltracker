@@ -15,6 +15,9 @@ Bugs
    It's something to do with week-1. Fix would be to have a table where you save the last cumulative expectation and realities of all goals, as opposed to
    searching for week-1. If you discontinue a goal for 5 weeks, and come back, you want to continue from where you left off, not week-1, when you were
    inactive
+2. Homepage's flash always says, 'Successfully tracked goals for Week 20'
+3.
+
 
 Extra features
 5. Fix the blue color highlighting thing in the homepage
