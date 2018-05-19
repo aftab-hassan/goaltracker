@@ -87,7 +87,7 @@ router.get('/', function(req, res){
     })
 
     console.log('done with the sample api 1')
-    req.flash('success_msg', 'You successfully retrieved all goals');
+    // req.flash('success_msg', 'You successfully retrieved all goals');
     console.log('done with the sample api 2')
 });
 

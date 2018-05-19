@@ -23,6 +23,12 @@
 	<div class="col_9">
 		{{{body}}}
 	</div>
+
+    {{#if success_msg}}
+        <div class="notice success"><i class="icon-remove-sign icon-large"></i> {{success_msg}}
+            <a href="#close" class="icon-remove"></a>
+        </div>
+    {{/if}}
 	
 	<hr />
 	

@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
         // res.render('index', {weekCount:29, allgoalsdetails:allgoalsdetails})
     });
 
-    req.flash('success_msg', 'You successfully retrieved all goals');
+    // req.flash('success_msg', 'You successfully retrieved all goals');
 
 });
 

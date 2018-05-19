@@ -108,7 +108,7 @@ router.get('/', function(req, res) {
         });
     }
 
-    req.flash('success_msg', 'You successfully retrieved all goals');
+    // req.flash('success_msg', 'You successfully retrieved all goals');
 
 });
 

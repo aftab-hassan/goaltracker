@@ -44,7 +44,7 @@ router.get('/', function(req, res, next) {
             });
             console.log('AFTAB goalSetValues : ' + JSON.stringify(goalSetValues))
             res.render('visualize/googlecharts', {goalSetValues})
-            req.flash('success_msg', 'You successfully retrieved all goals');
+            // req.flash('success_msg', 'You successfully retrieved all goals');
         }
     })
 });

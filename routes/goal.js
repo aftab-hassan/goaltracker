@@ -43,15 +43,18 @@ router.post('/add', function(req, res){
             console.log(logresult)
         })
 
-        res.send(info)
+        // res.send(info)
+        req.flash('success_msg', 'Successfully added goal '+req.body.goal);
+        res.redirect('/goal/addgoalview');
     });
 
-    req.flash('success_msg', 'You successfully added a goal');
+    // req.flash('success_msg', 'You successfully added a goal');
 });
 
 //call the /goal/edit api multiple times
 router.post('/editallgoals', function(req, res){
 
+    var encounteredError = 0;
     console.log('inside the /goal/editallgoals api route')
 
     // console.log('req.body == ' + req.body);
@@ -112,6 +115,7 @@ router.post('/editallgoals', function(req, res){
         }
     }, function (err)
         {
+            encounteredError = 1;
             if (err)
             {
                 console.error('Error: ' + err.message);
@@ -121,8 +125,12 @@ router.post('/editallgoals', function(req, res){
             console.log('Finished!');
         });
 
-    req.flash('success_msg', 'You successfully added a goal');
-    res.send(req.body)
+    if(encounteredError === 0)
+    {
+        req.flash('success_msg', 'You successfully edited goal expectations');
+        res.redirect('/goal/editgoalview')
+    }
+    // res.send(req.body)
 });
 
 // TODO : Get rid of info['state'] , don't think it's needed
@@ -178,7 +186,7 @@ router.get('/', function(req, res){
         res.render('index', {allgoalsdetails:allgoalsdetails})
     });
 
-    req.flash('success_msg', 'You successfully retrieved all goals');
+    // req.flash('success_msg', 'You successfully retrieved all goals');
 });
 
 router.get('/addgoalview', function(req, res, next) {
