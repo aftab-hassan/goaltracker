@@ -11,11 +11,11 @@ Immediate TODOs
 10. Add req.flash for error messages too
 
 Bugs
-1. Breaks when you deactivate a goal, and try and continue
+1. - Breaks when you deactivate a goal, and try and continue
    It's something to do with week-1. Fix would be to have a table where you save the last cumulative expectation and realities of all goals, as opposed to
    searching for week-1. If you discontinue a goal for 5 weeks, and come back, you want to continue from where you left off, not week-1, when you were
    inactive
-2. Homepage's flash always says, 'Successfully tracked goals for Week 20'
+2. - Homepage's flash always says, 'Successfully tracked goals for Week 20'
 3.
 
 

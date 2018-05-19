@@ -96,7 +96,7 @@ router.post('/add', function(req, res){
         });
 
         // res.send(info)
-        req.flash('success_msg', 'Successfully tracked goals for Week '+result[1]);
+        req.flash('success_msg', 'Successfully tracked goals for Week '+info['weekCount']);
         res.redirect('/');
     });
     // console.log('finished adding weeks')
