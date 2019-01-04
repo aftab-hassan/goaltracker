@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>goaltracker</title>
-<link rel="stylesheet" type="text/css" href="/stylesheets/kickstart.css" media="all" />
-<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all" />                 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="/javascripts/kickstart.js"></script>                       
-</head>
-<body>
+    <head>
+        <title>goaltracker</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/kickstart.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all" />                 
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
+        <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css" />
+        <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.components.min.css" />
+        <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js"></script>    
+    </head>
+    <body>
 
-<!-- Menu Horizontal -->
-<ul class="menu">
-<li class="current"><a href="/">Track goals</a></li>
-<li><a href="/goal/addgoalview">Add new goal</a></li>
-<li><a href="/goal/editgoalview">Edit existing goal</a></li>
-<li><a href="/visualize">Visualize goals</a></li>
-</ul>
-
-<div class="grid">
-<div class="col_12">
-	<div class="col_9">
-		{{{body}}}
-	</div>
-
-    {{#if success_msg}}
-        <div class="notice success"><i class="icon-remove-sign icon-large"></i> {{success_msg}}
-            <a href="#close" class="icon-remove"></a>
+    <!-- Menu Horizontal -->
+    <!--<ul class="menu">
+    <li class="current"><a href="/">Track goals</a></li>
+    <li><a href="/goal/addgoalview">Add new goal</a></li>
+    <li><a href="/goal/editgoalview">Edit existing goal</a></li>
+    <li><a href="/visualize">Visualize goals</a></li>
+    </ul>-->
+     <!--<div class="ms-NavBar">
+        <div class="ms-NavBar-openMenu js-openMenu">
+            <i class="ms-Icon ms-Icon--menu"></i>
         </div>
-    {{/if}}
-	
-	<hr />
-	
-</div>
+        <ul class="ms-NavBar-items">
+            <li class="ms-NavBar-item"><a class="ms-NavBar-link" href="/">Track goals</a></li>
+            <li class="ms-NavBar-item"><a class="ms-NavBar-link" href="/goal/addgoalview">Add new goal</a></li>
+            <li class="ms-NavBar-item"><a class="ms-NavBar-link" href="/goal/editgoalview">Edit existing goal</a></li>
+            <li class="ms-NavBar-item"><a class="ms-NavBar-link" href="/visualize">Visualize goals</a></li>
+            
+        </ul>
+    </div>-->
+       <ul class="ms-Pivot ms-Pivot--tabs menu" id="menulist">
+        <li class="ms-Pivot-link"><a class="ms-Link" href="/">Track goals</a></li>
+        <li class="ms-Pivot-link"><a class="ms-Link" href="/goal/addgoalview">Add new goal</a></li>
+        <li class="ms-Pivot-link"><a class="ms-Link" href="/goal/editgoalview">Edit existing goal</a></li>
+        <li class="ms-Pivot-link"><a class="ms-Link" href="/visualize">Visualize goals</a></li>
+        </ul>   
 
-</div><!-- END GRID -->
+        <div class="ms-Grid">
+            <div class="ms-Grid-col ms-u-sm12 ms-u-md1 ms-u-lg1"></div>
+            <div class="ms-Grid-col ms-u-sm12 ms-u-md11 ms-u-lg11">
+                <div class="ms-Grid-col ms-u-sm12 ms-u-md8 ms-u-lg7">
+                    {{{body}}}
+                </div>
 
-<!-- ===================================== START FOOTER ===================================== -->
-<div class="clear"></div>
-
-
-</body></html>
+                {{#if success_msg}}
+                    <div class="ms-MessageBar ms-MessageBar--success">
+                    <div class="ms-MessageBar-content">
+                        <div class="ms-MessageBar-icon">
+                        <i class="ms-Icon ms-Icon--Completed"></i>
+                        </div>
+                        <div class="ms-MessageBar-text">
+                        {{success_msg}}
+                        </div>
+                    </div>
+                    </div>
+                    <!--<div class="notice success"><i class="icon-remove-sign icon-large"></i> {{success_msg}}
+                        <a href="#close" class="icon-remove"></a>
+                    </div>-->
+                {{/if}}
+                <hr />
+            </div>
+        </div><!-- END GRID -->
+        <!-- ===================================== START FOOTER ===================================== -->
+        <div class="clear"></div>
+        <script type="text/javascript">
+            $(function(){
+            var current = location.pathname;
+            $('#menulist li a').each(function(){
+                var $this = $(this);
+                // if the current path is like this link, make it active
+                if($this.attr('href').indexOf(current) !== -1){
+                    $this.addClass('is-selected'); 
+                }
+            })
+            })
+        </script>
+    </body>
+</html>
