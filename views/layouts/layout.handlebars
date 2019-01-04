@@ -5,7 +5,6 @@
         <link rel="stylesheet" type="text/css" href="/stylesheets/kickstart.css" media="all" />
         <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all" />                 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
- 
         <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css" />
         <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.components.min.css" />
         <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js"></script>    
@@ -32,16 +31,16 @@
         </ul>
     </div>-->
        <ul class="ms-Pivot ms-Pivot--tabs menu" id="menulist">
-        <li class="ms-Pivot-link"><a class="ms-Link" href="/">Track goals</a></li>
+        <li class="ms-Pivot-link"><a class="ms-Link first" href="/">Track goals</a></li>
         <li class="ms-Pivot-link"><a class="ms-Link" href="/goal/addgoalview">Add new goal</a></li>
         <li class="ms-Pivot-link"><a class="ms-Link" href="/goal/editgoalview">Edit existing goal</a></li>
         <li class="ms-Pivot-link"><a class="ms-Link" href="/visualize">Visualize goals</a></li>
         </ul>   
 
         <div class="ms-Grid">
-            <div class="ms-Grid-col ms-u-sm12 ms-u-md1 ms-u-lg1"></div>
-            <div class="ms-Grid-col ms-u-sm12 ms-u-md11 ms-u-lg11">
-                <div class="ms-Grid-col ms-u-sm12 ms-u-md8 ms-u-lg7">
+            <div class="ms-Grid-col ms-u-sm12 ms-u-md1 ms-u-lg2"></div>
+            <div class="ms-Grid-col ms-u-sm12 ms-u-md11 ms-u-lg10">
+                <div class="ms-Grid-col ms-u-sm12 ms-u-md8 ms-u-lg9 dsgn">
                     {{{body}}}
                 </div>
 
@@ -60,7 +59,7 @@
                         <a href="#close" class="icon-remove"></a>
                     </div>-->
                 {{/if}}
-                <hr />
+                <!-- <hr /> -->
             </div>
         </div><!-- END GRID -->
         <!-- ===================================== START FOOTER ===================================== -->
@@ -70,9 +69,18 @@
             var current = location.pathname;
             $('#menulist li a').each(function(){
                 var $this = $(this);
+                console.log(current);
                 // if the current path is like this link, make it active
                 if($this.attr('href').indexOf(current) !== -1){
-                    $this.addClass('is-selected'); 
+                    console.log($this);
+                    if(current == '/')
+                    {
+                        $('#menulist li .first').addClass('is-selected'); 
+                    }
+                    else{
+                        $this.addClass('is-selected'); 
+                    }
+                    
                 }
             })
             })
