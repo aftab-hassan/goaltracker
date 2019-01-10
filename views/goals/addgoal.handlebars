@@ -3,17 +3,27 @@
 </p>
 
 <form method="post" action="/goal/add">
-    <table>
+    <table class="ms-Table">
         <tr>
-            <td>Goal name</td>
-            <td><input type="text" name="goal"></td>
+            <td><label class="ms-Label">Goal name</label></td>
+            <td><input class="ms-TextField-field" type="text" name="goal"></td>
         </tr>
         <tr>
-            <td>Expectation <br />(No. of days/week)</td>
-            <td><input type="text" name="expectation"></td>
+            <td><label class="ms-Label">Expectation <br />(No. of days/week)</label></td>
+            <td><input class="ms-TextField-field" type="text" name="expectation"></td>
         </tr>
     </table>
 
-    <input type="submit" value="Add goal">
-
+    <!--<input type="submit" value="Add goal">-->
+    <button class="ms-Button ms-Button--primary">
+        <span class="ms-Button-label">Add goal</span> 
+    </button>
 </form>
+<script type="text/javascript">
+  var ButtonElements = document.querySelectorAll(".ms-Button");
+  for (var i = 0; i < ButtonElements.length; i++) {
+    new fabric['Button'](ButtonElements[i], function() {
+      // Insert Event Here
+    });
+  }
+</script>

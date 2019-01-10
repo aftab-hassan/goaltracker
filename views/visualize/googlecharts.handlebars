@@ -1,13 +1,22 @@
 <html>
 <head>
-    <table>
+    <table >
         <thead>
         </thead>
         <tbody>
-        <td><button onclick=init('MAGICSTRINGTHATGETSMEALLGOALS')>All goals</button></td>
+        <td>
+            <button class="ms-Button ms-Button--primary" onclick=init('MAGICSTRINGTHATGETSMEALLGOALS')>
+            <span class="ms-Button-label">All goals</span> 
+        </button>
+            
+            <!--<button onclick=init('MAGICSTRINGTHATGETSMEALLGOALS')>All goals</button>--></td>
         {{#goalSetValues}}
             <!--<tr>-->
-                <td><button onclick=init('{{goal}}')>{{{goal}}}</button></td>
+                <td>
+                    <button class="ms-Button ms-Button--primary" onclick=init('{{goal}}')>
+            <span class="ms-Button-label">{{{goal}}}</span> 
+        </button>
+                   <!-- <button onclick=init('{{goal}}')>{{{goal}}}</button>--></td>
             <!--</tr>-->
         {{/goalSetValues}}
         </tbody>
@@ -104,6 +113,14 @@
     }
 
     </script>
+    <script type="text/javascript">
+  var ButtonElements = document.querySelectorAll(".ms-Button");
+  for (var i = 0; i < ButtonElements.length; i++) {
+    new fabric['Button'](ButtonElements[i], function() {
+      // Insert Event Here
+    });
+  }
+</script>
 </head>
 
 <body>

@@ -3,22 +3,33 @@
 </p>
 
 <form method="post" action="/goal/editallgoals">
-    <table>
+    <table  class="ms-Table">
         <thead>
-        <th>Goal</th>
-        <th>Current expectation <br />(No. of days/week)</th>
-        <th>Updated expectation <br />(No. of days/week)</th>
+        <th><b>Goal</b></th>
+        <th><b>Current expectation <br />(No. of days/week)</b></th>
+        <th><b>Updated expectation <br />(No. of days/week)</b></th>
         </thead>
         <tbody>
         {{#allgoalsdetails}}
             <tr>
-                <td>{{goal}}</td>
-                <td>{{expectation}}</td>
-                <td><input type="text" id={{goalid}} name={{goalid}} value={{expectation}}></td>
+                <td><label class="ms-Label">{{goal}}</label></td>
+                <td><label class="ms-Label">{{expectation}}</label></td>
+                <td><input class="ms-TextField-field" type="text" id={{goalid}} name={{goalid}} value={{expectation}}></td>
             </tr>
         {{/allgoalsdetails}}
         </tbody>
     </table>
 
-    <input type="submit" value="Edit goal expectations">
+    <!--<input type="submit" value="Edit goal expectations">-->
+    <button class="ms-Button ms-Button--primary">
+            <span class="ms-Button-label">Edit goal expectations</span> 
+        </button>
 </form>
+<script type="text/javascript">
+  var ButtonElements = document.querySelectorAll(".ms-Button");
+  for (var i = 0; i < ButtonElements.length; i++) {
+    new fabric['Button'](ButtonElements[i], function() {
+      // Insert Event Here
+    });
+  }
+</script>

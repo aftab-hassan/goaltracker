@@ -16,7 +16,6 @@ jQuery(document).ready(function($){
 		$(this).find('li').has('ul').addClass('has-menu')
 		.find('a:first').append('<span class="arrow">&nbsp;</span>');
 	});
-
 	$('ul.menu li').hover(function(){
 		$(this).find('ul:first').stop(true, true).fadeIn('fast');
 		$(this).addClass('hover');
