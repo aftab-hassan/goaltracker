@@ -1,0 +1,48 @@
+</div>
+<%if (success_msg != '') { %>
+    <div class="ms-MessageBar ms-MessageBar--success">
+            <div class="ms-MessageBar-content">
+                <div class="ms-MessageBar-icon">
+                <i class="ms-Icon ms-Icon--Completed"></i>
+                </div>
+                <div class="ms-MessageBar-text">
+                        <%= success_msg %>
+                </div>
+            </div>
+            </div>
+<% } %>
+<!--   {{#if success_msg}}
+    <div class="ms-MessageBar ms-MessageBar--success">
+    <div class="ms-MessageBar-content">
+        <div class="ms-MessageBar-icon">
+        <i class="ms-Icon ms-Icon--Completed"></i>
+        </div>
+        <div class="ms-MessageBar-text">
+        {{success_msg}}
+        </div>
+    </div>
+    </div>
+{{/if}}-->
+</div>
+</div><!-- END GRID -->
+<!-- ===================================== START FOOTER ===================================== -->
+<div class="clear"></div>
+<script type="text/javascript">
+$(function(){
+var current = location.pathname;
+$('#menulist li a').each(function(){
+var $this = $(this);
+if($this.attr('href').indexOf(current) !== -1){
+    if(current == '/')
+    {
+        $('#menulist li .first').addClass('is-selected'); 
+    }
+    else{
+        $this.addClass('is-selected'); 
+    }
+}
+})
+})
+</script>
+</body>
+</html>

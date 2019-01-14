@@ -1,3 +1,4 @@
+<% include ../layouts/layout.html %>
 <html>
 <head>
     <table >
@@ -5,20 +6,20 @@
         </thead>
         <tbody>
         <td>
-            <button class="ms-Button ms-Button--primary" onclick=init('MAGICSTRINGTHATGETSMEALLGOALS')>
+            <button class="ms-Button ms-Button--primary" onclick="init('MAGICSTRINGTHATGETSMEALLGOALS')">
             <span class="ms-Button-label">All goals</span> 
         </button>
             
-            <!--<button onclick=init('MAGICSTRINGTHATGETSMEALLGOALS')>All goals</button>--></td>
-        {{#goalSetValues}}
-            <!--<tr>-->
-                <td>
-                    <button class="ms-Button ms-Button--primary" onclick=init('{{goal}}')>
-            <span class="ms-Button-label">{{{goal}}}</span> 
-        </button>
-                   <!-- <button onclick=init('{{goal}}')>{{{goal}}}</button>--></td>
-            <!--</tr>-->
-        {{/goalSetValues}}
+            </td>
+       <!-- {{#goalSetValues}}-->
+            <% for(var i=0; i < goalSetValues.length; i++) { %>
+            <td>
+                <button class="ms-Button ms-Button--primary" onclick="init('<%= goalSetValues[i].goal %>')">
+                    <span class="ms-Button-label"><%= goalSetValues[i].goal %></span> 
+                </button>
+            </td>
+            <%} %>
+        <!--{{/goalSetValues}}-->
         </tbody>
     </table>
 
@@ -35,7 +36,7 @@
     google.charts.setOnLoadCallback(init);
 
     function init (goalName) {
-
+        console.log(goalName);
         console.log('came inside the init function with goalName == ' + goalName)
         if(goalName && goalName!== 'MAGICSTRINGTHATGETSMEALLGOALS')
         {
@@ -127,4 +128,6 @@
 <!--Div that will hold the pie chart-->
 <div id="chart_div"></div>
 </body>
+
 </html>
+<% include ../layouts/footer.html %>

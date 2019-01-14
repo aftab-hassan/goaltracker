@@ -22,7 +22,6 @@ position:relative;z-index:1000;}
 	.menu ul{margin:0;padding:0;position: absolute;top:100%;left:0;display:none;min-width:150px;max-width:150%;*width:150px;}
 	.menu ul li{display:block;width:100%;}
 	.menu ul li a{display:block;}
-		.menu ul ul{top:0;left:100%;}
 
 /*--------------Dividers-------------------*/
 	.menu ul li.divider{border-top:1px solid #ccc;}
@@ -68,8 +67,6 @@ background: linear-gradient(top, rgba(252,252,252,1) 0%,rgba(224,224,224,1) 100%
 z-index:600;
 }
 
-	.menu li{}
-
 		.menu li a{
 		    text-shadow: 0px 1px 1px #fff;
 		    padding: 22px 35px;
@@ -104,14 +101,6 @@ z-index:600;
 	border:1px solid #ccc;
 	}
 
-	.menu ul li{}
-	.menu ul li a{}
-
-		/* sub-sub menus */
-		.menu ul ul{}
-		.menu ul ul li{}
-		.menu ul ul li a{}
-
 	/* arrows */
 	/* arrow down */  .menu li.has-menu span.arrow{border-color-top:#ccc;border-color:#ccc transparent transparent transparent;}
 	/* arrow left */  .menu li li.has-menu span.arrow, .menu.vertical li.has-menu span.arrow
@@ -130,7 +119,58 @@ z-index:600;
 
 .menu li.menu-toggle{display:none;}
 
+@media all and (max-width: 768px) {
 
+	.grid .menu li,
+	.grid .menu.vertical li,
+	.grid .menu.vertical.right li{
+	display:block;
+	display:none;
+	}
+
+	.grid .menu li.menu-toggle,
+	.grid .menu.vertical li.menu-toggle,
+	.grid .menu.vertical.right li.menu-toggle{
+	display:block;
+	}
+
+	.grid .menu:hover li,
+	.grid .menu.vertical:hover li,
+	.grid .menu.vertical.right:hover li{
+	display:block;
+	}
+
+	/* arrows */
+	.grid .menu li.has-menu span.arrow,
+	.grid .menu.vertical li.has-menu span.arrow,
+	.grid .menu.vertical.right li.has-menu span.arrow,
+	.grid .menu li li.has-menu span.arrow, .menu.vertical li.has-menu span.arrow
+	{ border-color-top:#ccc;border-color:#ccc transparent transparent transparent;}
+
+	.grid .menu.vertical.right li.has-menu span.arrow{
+	right:5px;left:auto;
+	}
+
+	.grid .menu li a{
+	display:block;
+	}
+
+	.grid .menu ul,
+	.grid .menu ul ul,
+	.grid .menu.vertical ul,
+	.grid .menu.vertical.right ul{
+	position:relative;
+	top:0;
+	left:0;
+	margin:10px;
+	}
+
+}
+.menu li .is-selected {
+	color: #fff;
+	text-shadow: 0px 0px 0px #fff;
+	background: #0078d7;
+}
 /*------------ new changes-----------*/
 .menu li .is-selected {
 	font-weight: 600;
