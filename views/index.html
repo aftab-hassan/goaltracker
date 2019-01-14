@@ -1,3 +1,4 @@
+<% include layouts/layout.html %> 
 <h4>Welcome To Goal tracker</h4>
 <p class="ms-fontSize-m">
     Goal tracker helps keep track of your goals. Hang in there cuz tomorrow is going to be better!
@@ -5,8 +6,11 @@
 <!--<p><b>Update progress for Week {{weekCount}}</b></p>-->
 <form id="weekForm" method="post" action="/expectationrealityandweek/add">
     <div class="ms-Grid">
-        <div class="ms-Grid-col ms-u-sm12 ms-u-md1 ms-u-lg4"><span class="ms-fontSize-mPlus">Update progress for Week </span></div>
-        <div class="ms-Grid-col ms-u-sm12 ms-u-md1 ms-u-lg8"><input class="ms-TextField-field" type="text" id="weekCount" name="weekCount" value={{weekCount}}></div>
+        <div class="ms-Grid-col {{#allgoalsdetails}}ms-u-sm12 ms-u-md1 ms-u-lg3">
+            <span class="ms-fontSize-mPlus">Update progress for Week </span></div>
+        <div class="ms-Grid-col ms-u-sm12 ms-u-md1 ms-u-lg4">
+            <input class="ms-TextField-field" type="text" id="weekCount" name="weekCount" value="<%= weekCount%>">
+        </div>
     </div>
     <table class="ms-Table">
         <thead>
@@ -17,13 +21,13 @@
             </tr>
         </thead>
         <tbody>
-            {{#allgoalsdetails}}
+            <% for(var i=0; i < allgoalsdetails.length; i++) { %>
             <tr>
-                <td><label class="ms-Label">{{goal}}</label></td>
-                <td><label class="ms-Label">{{expectation}}</label></td>
-                <td><input class="ms-TextField-field" type="text" id={{goalid}} name={{goalid}} /></td>
+                <td><label class="ms-Label"><%= allgoalsdetails[i].goal %></label></td>
+                <td><label class="ms-Label"><%= allgoalsdetails[i].expectation %></label></td>
+                <td><input class="ms-TextField-field" type="text" id="<%= allgoalsdetails[i].goalid %>" name="<%= allgoalsdetails[i].goalid %>" value="<%= allgoalsdetails[i].expectation %>"></td>
             </tr>
-            {{/allgoalsdetails}}
+            <%} %>
         </tbody>
     </table>
 
@@ -78,6 +82,7 @@
         </button>
     </div>
 </form>
+<% include layouts/footer.html %>
 <script type="text/javascript">
   var ButtonElements = document.querySelectorAll(".ms-Button");
   for (var i = 0; i < ButtonElements.length; i++) {
